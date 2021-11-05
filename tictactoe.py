@@ -20,6 +20,15 @@ def board():
         print()
         print("--------------")
 
+def layoutBoard():
+    print("-------------------")
+    for row in range(3,0,-1):
+        print("|", end='')
+        for col in range(3):
+            print(" ",((row-1)*3+col+1), " ", end='')
+            print("|", end='')
+        print()
+        print("-------------------")
 
 def move(player):
     pos = int(input("Enter the number from 1 to 9: ")) - 1
@@ -45,6 +54,7 @@ def check():
 
 
 start()
+layoutBoard()
 while won != True:
     count += 1
     board()
